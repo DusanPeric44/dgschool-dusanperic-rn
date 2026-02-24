@@ -17,3 +17,15 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
+
+// Easy:
+
+// Create a new screen called "Contact.js" in the screens folder.
+// This screen should contain a single Text element with the words "Contact Page".
+// Add this screen to your MainStackNavigator and test that you can
+// navigate to it from the Home screen.
+
+// Medium:
+
+// On the About screen, display a list of three things about your
+// app (you can make them up). Use the FlatList component to display this list.
