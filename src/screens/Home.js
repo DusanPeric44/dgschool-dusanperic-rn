@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
 import Swiper from "react-native-swiper";
+import Icon from "../components/Icon";
 
 const Home = ({ navigation }) => (
   <View style={styles.container}>
@@ -29,6 +30,16 @@ const Home = ({ navigation }) => (
         </View>
       </Swiper>
     </View>
+    <View style={styles.iconsContainer}>
+      <Icon name="cellphone" iconText="iPhone" />
+      <Icon name="android" iconText="Samsung" />
+      <Icon name="laptop" iconText="Laptop" />
+    </View>
+    <View style={styles.iconsContainer}>
+      <Icon name="tablet" iconText="Tablet" />
+      <Icon name="mouse" iconText="Mouse" />
+      <Icon name="keyboard" iconText="Keyboard" />
+    </View>
   </View>
 );
 
@@ -54,18 +65,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
   },
+  iconsContainer: {
+    width: "90%",
+    alignSelf: "center",
+    marginTop: 30,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
 });
 
 export default Home;
-
-// Easy:
-
-// Create a new screen called "Contact.js" in the screens folder.
-// This screen should contain a single Text element with the words "Contact Page".
-// Add this screen to your MainStackNavigator and test that you can
-// navigate to it from the Home screen.
-
-// Medium:
-
-// On the About screen, display a list of three things about your
-// app (you can make them up). Use the FlatList component to display this list.
