@@ -2,6 +2,7 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
 import About from "../screens/About";
+import Ios from "../screens/Ios";
 
 const Stack = createStackNavigator();
 
@@ -33,4 +34,18 @@ const AboutStackNavigator = ({ navigation }) => (
   </Stack.Navigator>
 );
 
-export { MainStackNavigator, AboutStackNavigator };
+const IosStackNavigator = ({ navigation }) => (
+  <Stack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: "#FF6347",
+      },
+      headerTintColor: "white",
+      headerShown: false,
+    }}
+  >
+    <Stack.Screen name="Ios" component={Ios} />
+  </Stack.Navigator>
+);
+
+export { MainStackNavigator, AboutStackNavigator, IosStackNavigator };
