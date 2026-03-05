@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
 import About from "../screens/About";
 import Ios from "../screens/Ios";
+import Android from "../screens/Android";
 
 const Stack = createStackNavigator();
 
@@ -48,4 +49,23 @@ const IosStackNavigator = ({ navigation }) => (
   </Stack.Navigator>
 );
 
-export { MainStackNavigator, AboutStackNavigator, IosStackNavigator };
+const AndroidStackNavigator = ({ navigation }) => (
+  <Stack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: "#FF6347",
+      },
+      headerTintColor: "white",
+      headerShown: false,
+    }}
+  >
+    <Stack.Screen name="Android" component={Android} />
+  </Stack.Navigator>
+);
+
+export {
+  MainStackNavigator,
+  AboutStackNavigator,
+  IosStackNavigator,
+  AndroidStackNavigator,
+};

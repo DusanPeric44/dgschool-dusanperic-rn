@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   AboutStackNavigator,
+  AndroidStackNavigator,
   IosStackNavigator,
   MainStackNavigator,
 } from "./StackNavigator";
@@ -53,6 +54,16 @@ const BottomTabNavigator = () => {
             <MaterialCommunityIcons name="cellphone" size={26} color={color} />
           ),
           tabBarLabel: "iOS",
+        }}
+      />
+      <Tab.Screen
+        name="Android"
+        component={AndroidStackNavigator}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="android" size={26} color={color} />
+          ),
+          tabBarLabel: "Android",
         }}
       />
     </Tab.Navigator>
