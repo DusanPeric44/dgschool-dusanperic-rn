@@ -4,6 +4,7 @@ import Home from "../screens/Home";
 import About from "../screens/About";
 import Ios from "../screens/Ios";
 import Android from "../screens/Android";
+import Single from "../screens/Single";
 
 const Stack = createStackNavigator();
 
@@ -14,10 +15,12 @@ const MainStackNavigator = ({ navigation }) => (
         backgroundColor: "#FF6347",
       },
       headerTintColor: "white",
-      headerShown: false,
     }}
   >
     <Stack.Screen name="Home" component={Home} />
+    <Stack.Screen name="Ios" component={Ios} />
+    <Stack.Screen name="Android" component={Android} />
+    <Stack.Screen name="Single" component={Single} />
   </Stack.Navigator>
 );
 
